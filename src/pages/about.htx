@@ -1,0 +1,4 @@
+<!-- import "../components/BasicLayout/BasicLayout" -->
+<BasicLayout title="About">
+    <h1>About page</h1>
+</BasicLayout>

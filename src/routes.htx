@@ -1,0 +1,7 @@
+<?php
+$GLOBAL_route_pages = [
+    "Home" => "/",
+    "About" => "/about",
+    "Contact" => "/contact",
+];
+?>

@@ -1,0 +1,8 @@
+<?php
+$data = explode(", ", ($props["data"] ?: ""));
+?>
+<tr>
+    <?php foreach ($data as $id => $dataItem) { ?>
+        <td><?= $dataItem ?></td>
+    <?php } ?>
+</tr>

@@ -1,0 +1,11 @@
+<!-- import "../Nav/Nav" -->
+<?php
+$currentPage = $props["page"];
+?>
+<header class="NavBar-container">
+    <nav>
+        <?php foreach ($GLOBAL_route_pages as $page => $url) { ?>
+            <Nav to=$url name=$page active=$currentPage />
+        <?php } ?>
+    </nav>
+</header>

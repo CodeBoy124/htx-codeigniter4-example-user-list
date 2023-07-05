@@ -1,0 +1,16 @@
+<!-- import "../Table/Table" -->
+<!-- import "../Row/Row" -->
+<?php
+$usersData = array_map(function ($userData) {
+    return implode(", ", [
+        $userData->name,
+        $userData->email,
+        "<a href='" . base_url("/edit/" . $userData->id) . "'>Edit</a> <a href='" . base_url("/api/delete/" . $userData->id) . "'>Delete</a>"
+    ]);
+}, $props["users"])
+?>
+<Table titles="name, email, modify">
+    <?php foreach($usersData as $userData) { ?>
+        <Row data=$userData />
+    <?php } ?>
+</Table>

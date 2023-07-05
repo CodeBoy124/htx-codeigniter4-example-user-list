@@ -1,0 +1,9 @@
+<?php if(isset($props["type"])) { ?>
+    <button type="<?= $props["type"] ?>" class="btn <?= (isset($props["active"]) && $props["active"] == true) ? "btn-primary" : "btn-secondary" ?>" <?= isset($props["onclick"]) ? ("onclick='" . $props["onclick"] . "'") : "" ?>>
+        <INNER />
+    </button>
+<?php } else { ?>
+    <button class="btn <?= (isset($props["active"]) && $props["active"] == true) ? "btn-primary" : "btn-secondary" ?>" <?= isset($props["onclick"]) ? ("onclick='" . $props["onclick"] . "'") : "" ?>>
+        <INNER />
+    </button>
+<?php } ?>

@@ -1,0 +1,7 @@
+<a class="Nav-a" href="<?= base_url($props["to"]) ?: "/" ?>">
+    <?php if ($props["active"] == $props["name"]) { ?>
+        <b><?= $props["name"] ?: "" ?></b>
+    <?php } else { ?>
+        <?= $props["name"] ?: "" ?>
+    <?php } ?>
+</a>

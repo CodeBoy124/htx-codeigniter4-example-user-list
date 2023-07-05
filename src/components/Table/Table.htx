@@ -1,0 +1,15 @@
+<?php
+$titles = explode(", ", ($props["titles"] ?: ""));
+?>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <?php foreach ($titles as $title) { ?>
+                <th class="col"><?= $title ?></th>
+            <?php } ?>
+        </tr>
+    </thead>
+    <tbody>
+        <INNER />
+    </tbody>
+</table>

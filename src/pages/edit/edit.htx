@@ -1,0 +1,20 @@
+<!-- import "../../components/BasicLayout/BasicLayout" -->
+<!-- import "../../components/InputField/InputField" -->
+<!-- import "../../components/Button/Button" -->
+
+<BasicLayout title="Edit Person">
+    <div style="width: 100%; text-align: center; padding-top: 10px;">
+        <h1><?= (isset($GLOBAL_person) && isset($GLOBAL_person->name)) ? ("Edit <span id='person-title'>" . $GLOBAL_person->name . "</span>") : "Create new person" ?></h1>
+        <form action="<?= base_url("/api/save") ?>" method="post" style="width: 80%; margin: auto;">
+            <InputField name="name" value=((isset($GLOBAL_person) && isset($GLOBAL_person->name)) ? $GLOBAL_person->name : "") />
+            <InputField name="email" value=((isset($GLOBAL_person) && isset($GLOBAL_person->email)) ? $GLOBAL_person->email : "") />
+
+            <?php if (isset($GLOBAL_person->id)) { ?>
+                <InputField type="hidden" name="id" value=$GLOBAL_person->id />
+            <?php } ?>
+
+            <Button type="submit" active=true>Save</Button>
+            <Button onclick=("event.preventDefault(); location.href=\"" . base_url('/') . "\";")>Cancel</Button>
+        </form>
+    </div>
+</BasicLayout>
