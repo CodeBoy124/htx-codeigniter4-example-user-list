@@ -21,11 +21,11 @@ class Home extends BaseController
         $data = [
             "person" => $usersModel->find($id)
         ];
-        return view('edit/edit', $data);
+        return view('edit', $data);
     }
     public function new()
     {
-        return view('edit/edit');
+        return view('edit');
     }
     public function about()
     {

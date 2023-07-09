@@ -1,6 +1,6 @@
-<!-- import "../../components/BasicLayout/BasicLayout" -->
-<!-- import "../../components/InputField/InputField" -->
-<!-- import "../../components/Button/Button" -->
+<!-- import "../components/BasicLayout/BasicLayout" -->
+<!-- import "../components/InputField/InputField" -->
+<!-- import "../components/Button/Button" -->
 
 <BasicLayout title="Edit Person">
     <div style="width: 100%; text-align: center; padding-top: 10px;">
@@ -17,4 +17,5 @@
             <Button onclick=("event.preventDefault(); location.href=\"" . base_url('/') . "\";")>Cancel</Button>
         </form>
     </div>
+    <JS src="<?= base_url("/assets/js/edit.js") ?>" />
 </BasicLayout>
